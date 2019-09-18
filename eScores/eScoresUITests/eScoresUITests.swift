@@ -2,7 +2,7 @@
 //  eScoresUITests.swift
 //  eScoresUITests
 //
-//  Created by Nikita Gerasimoski on 9/9/19.
+//  Created by Nikita Gerasimoski on 9/18/19.
 //  Copyright © 2019 Nikita Gerasimoski. All rights reserved.
 //
 
