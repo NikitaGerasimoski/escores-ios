@@ -3,10 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1361419C233661BC00F284DC /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614190233661BB00F284DC /* Match.swift */; };
+		1361419D233661BC00F284DC /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614191233661BB00F284DC /* Live.swift */; };
+		1361419E233661BC00F284DC /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614192233661BB00F284DC /* League.swift */; };
+		1361419F233661BC00F284DC /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614193233661BB00F284DC /* Serie.swift */; };
+		136141A0233661BC00F284DC /* Videogame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614194233661BB00F284DC /* Videogame.swift */; };
+		136141A1233661BC00F284DC /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614195233661BB00F284DC /* Opponent.swift */; };
+		136141A2233661BC00F284DC /* Winner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614196233661BB00F284DC /* Winner.swift */; };
+		136141A3233661BC00F284DC /* Opponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614197233661BB00F284DC /* Opponents.swift */; };
+		136141A4233661BC00F284DC /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614198233661BC00F284DC /* Results.swift */; };
+		136141A5233661BC00F284DC /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13614199233661BC00F284DC /* Tournament.swift */; };
+		136141A6233661BC00F284DC /* Videogame_version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361419A233661BC00F284DC /* Videogame_version.swift */; };
+		136141A7233661BC00F284DC /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361419B233661BC00F284DC /* Games.swift */; };
+		136141AA2337A54100F284DC /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136141A92337A54100F284DC /* DateUtils.swift */; };
+		136141AD2337AEC200F284DC /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136141AB2337AEC200F284DC /* MatchTableViewCell.swift */; };
+		136141AE2337AEC200F284DC /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 136141AC2337AEC200F284DC /* MatchTableViewCell.xib */; };
 		1395A1092332308300B2655C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1395A1082332308300B2655C /* AppDelegate.swift */; };
 		1395A1102332308500B2655C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1395A10F2332308500B2655C /* Assets.xcassets */; };
 		1395A1132332308500B2655C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1395A1112332308500B2655C /* LaunchScreen.storyboard */; };
@@ -14,9 +29,10 @@
 		1395A1292332308500B2655C /* eScoresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1395A1282332308500B2655C /* eScoresUITests.swift */; };
 		1395A1372332314800B2655C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1395A1362332314800B2655C /* Main.storyboard */; };
 		1395A1392332317300B2655C /* MatchOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1395A1382332317300B2655C /* MatchOverViewController.swift */; };
-		33F33141EE2D314B96ABD889 /* Pods_eScoresUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874720B5AB0100043371DF1A /* Pods_eScoresUITests.framework */; };
-		36C5AF6AABCA1681A90AB05C /* Pods_eScores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A41878285F3AD82734DF7F5 /* Pods_eScores.framework */; };
-		8209E13F7263D317E39F0DB0 /* Pods_eScoresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FBFB1075A1A43BCB27CEE6 /* Pods_eScoresTests.framework */; };
+		1395A13B2332369D00B2655C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1395A13A2332369D00B2655C /* NetworkManager.swift */; };
+		1395A13D233236D000B2655C /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1395A13C233236D000B2655C /* URL.swift */; };
+		13FFEB0F23342888005BB75F /* MatchOverVIewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FFEB0E23342888005BB75F /* MatchOverVIewPresenter.swift */; };
+		B7FABBE879AF1ACCFBEEA513 /* Pods_eScores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5E68F427468ED8A2FDA706 /* Pods_eScores.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +53,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06955BC2A417B8BF33091316 /* Pods-eScoresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eScoresTests.release.xcconfig"; path = "Target Support Files/Pods-eScoresTests/Pods-eScoresTests.release.xcconfig"; sourceTree = "<group>"; };
-		0CC95B16CCFA371C7FC2A2A7 /* Pods-eScores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eScores.release.xcconfig"; path = "Target Support Files/Pods-eScores/Pods-eScores.release.xcconfig"; sourceTree = "<group>"; };
+		13614190233661BB00F284DC /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		13614191233661BB00F284DC /* Live.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
+		13614192233661BB00F284DC /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		13614193233661BB00F284DC /* Serie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
+		13614194233661BB00F284DC /* Videogame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Videogame.swift; sourceTree = "<group>"; };
+		13614195233661BB00F284DC /* Opponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
+		13614196233661BB00F284DC /* Winner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Winner.swift; sourceTree = "<group>"; };
+		13614197233661BB00F284DC /* Opponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opponents.swift; sourceTree = "<group>"; };
+		13614198233661BC00F284DC /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		13614199233661BC00F284DC /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
+		1361419A233661BC00F284DC /* Videogame_version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Videogame_version.swift; sourceTree = "<group>"; };
+		1361419B233661BC00F284DC /* Games.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		136141A92337A54100F284DC /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		136141AB2337AEC200F284DC /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		136141AC2337AEC200F284DC /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		1395A1052332308300B2655C /* eScores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eScores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1395A1082332308300B2655C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1395A10F2332308500B2655C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,13 +81,12 @@
 		1395A12A2332308500B2655C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1395A1362332314800B2655C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1395A1382332317300B2655C /* MatchOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchOverViewController.swift; sourceTree = "<group>"; };
-		3855E17D826D6E794F61C53A /* Pods-eScoresUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eScoresUITests.release.xcconfig"; path = "Target Support Files/Pods-eScoresUITests/Pods-eScoresUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5A41878285F3AD82734DF7F5 /* Pods_eScores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eScores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73D5C5B93B5C3A6F6B929008 /* Pods-eScoresTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eScoresTests.debug.xcconfig"; path = "Target Support Files/Pods-eScoresTests/Pods-eScoresTests.debug.xcconfig"; sourceTree = "<group>"; };
-		874720B5AB0100043371DF1A /* Pods_eScoresUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eScoresUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3C81F098A0E1BD5B75C7F80 /* Pods-eScores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eScores.debug.xcconfig"; path = "Target Support Files/Pods-eScores/Pods-eScores.debug.xcconfig"; sourceTree = "<group>"; };
-		E9FBFB1075A1A43BCB27CEE6 /* Pods_eScoresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eScoresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9D853DDEC6496195DF34451 /* Pods-eScoresUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eScoresUITests.debug.xcconfig"; path = "Target Support Files/Pods-eScoresUITests/Pods-eScoresUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1395A13A2332369D00B2655C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1395A13C233236D000B2655C /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		13FFEB0E23342888005BB75F /* MatchOverVIewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchOverVIewPresenter.swift; sourceTree = "<group>"; };
+		26ABDB7E0B95A04A5111687F /* Pods-eScores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eScores.release.xcconfig"; path = "Target Support Files/Pods-eScores/Pods-eScores.release.xcconfig"; sourceTree = "<group>"; };
+		4BE74DFC4A83843EF39366D2 /* Pods-eScores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eScores.debug.xcconfig"; path = "Target Support Files/Pods-eScores/Pods-eScores.debug.xcconfig"; sourceTree = "<group>"; };
+		4F5E68F427468ED8A2FDA706 /* Pods_eScores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eScores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C5AF6AABCA1681A90AB05C /* Pods_eScores.framework in Frameworks */,
+				B7FABBE879AF1ACCFBEEA513 /* Pods_eScores.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8209E13F7263D317E39F0DB0 /* Pods_eScoresTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,13 +109,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F33141EE2D314B96ABD889 /* Pods_eScoresUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		136141A8233661E300F284DC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				13614190233661BB00F284DC /* Match.swift */,
+				1361419B233661BC00F284DC /* Games.swift */,
+				13614192233661BB00F284DC /* League.swift */,
+				13614191233661BB00F284DC /* Live.swift */,
+				13614195233661BB00F284DC /* Opponent.swift */,
+				13614197233661BB00F284DC /* Opponents.swift */,
+				13614198233661BC00F284DC /* Results.swift */,
+				13614193233661BB00F284DC /* Serie.swift */,
+				13614199233661BC00F284DC /* Tournament.swift */,
+				1361419A233661BC00F284DC /* Videogame_version.swift */,
+				13614194233661BB00F284DC /* Videogame.swift */,
+				13614196233661BB00F284DC /* Winner.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		136141AF2337AECF00F284DC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				136141AB2337AEC200F284DC /* MatchTableViewCell.swift */,
+				136141AC2337AEC200F284DC /* MatchTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		136141B02337AEE300F284DC /* NetworkOperations */ = {
+			isa = PBXGroup;
+			children = (
+				136141A92337A54100F284DC /* DateUtils.swift */,
+				1395A13C233236D000B2655C /* URL.swift */,
+				1395A13A2332369D00B2655C /* NetworkManager.swift */,
+			);
+			path = NetworkOperations;
+			sourceTree = "<group>";
+		};
+		136141B12337AF1C00F284DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				136141B22337AF2B00F284DC /* StoryBoards */,
+				1395A1382332317300B2655C /* MatchOverViewController.swift */,
+				13FFEB0E23342888005BB75F /* MatchOverVIewPresenter.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		136141B22337AF2B00F284DC /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				1395A1112332308500B2655C /* LaunchScreen.storyboard */,
+				1395A1362332314800B2655C /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		1395A0FC2332308300B2655C = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +180,7 @@
 				1395A1272332308500B2655C /* eScoresUITests */,
 				1395A1062332308300B2655C /* Products */,
 				E243013DA9ED88D5B67D0DEC /* Pods */,
-				9B021E362EC2985C291337BD /* Frameworks */,
+				F8D25FA198A0BD49157259C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,10 +199,11 @@
 			children = (
 				1395A1082332308300B2655C /* AppDelegate.swift */,
 				1395A10F2332308500B2655C /* Assets.xcassets */,
-				1395A1362332314800B2655C /* Main.storyboard */,
-				1395A1382332317300B2655C /* MatchOverViewController.swift */,
-				1395A1112332308500B2655C /* LaunchScreen.storyboard */,
+				136141B12337AF1C00F284DC /* Controllers */,
 				1395A1142332308500B2655C /* Info.plist */,
+				136141A8233661E300F284DC /* models */,
+				136141AF2337AECF00F284DC /* Cells */,
+				136141B02337AEE300F284DC /* NetworkOperations */,
 			);
 			path = eScores;
 			sourceTree = "<group>";
@@ -142,28 +226,21 @@
 			path = eScoresUITests;
 			sourceTree = "<group>";
 		};
-		9B021E362EC2985C291337BD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5A41878285F3AD82734DF7F5 /* Pods_eScores.framework */,
-				E9FBFB1075A1A43BCB27CEE6 /* Pods_eScoresTests.framework */,
-				874720B5AB0100043371DF1A /* Pods_eScoresUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E243013DA9ED88D5B67D0DEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C3C81F098A0E1BD5B75C7F80 /* Pods-eScores.debug.xcconfig */,
-				0CC95B16CCFA371C7FC2A2A7 /* Pods-eScores.release.xcconfig */,
-				73D5C5B93B5C3A6F6B929008 /* Pods-eScoresTests.debug.xcconfig */,
-				06955BC2A417B8BF33091316 /* Pods-eScoresTests.release.xcconfig */,
-				F9D853DDEC6496195DF34451 /* Pods-eScoresUITests.debug.xcconfig */,
-				3855E17D826D6E794F61C53A /* Pods-eScoresUITests.release.xcconfig */,
+				4BE74DFC4A83843EF39366D2 /* Pods-eScores.debug.xcconfig */,
+				26ABDB7E0B95A04A5111687F /* Pods-eScores.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F8D25FA198A0BD49157259C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F5E68F427468ED8A2FDA706 /* Pods_eScores.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,11 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1395A12D2332308500B2655C /* Build configuration list for PBXNativeTarget "eScores" */;
 			buildPhases = (
-				335BA1287C3A223B1E149A9C /* [CP] Check Pods Manifest.lock */,
+				558D10069154D945449C97D8 /* [CP] Check Pods Manifest.lock */,
 				1395A1012332308300B2655C /* Sources */,
 				1395A1022332308300B2655C /* Frameworks */,
 				1395A1032332308300B2655C /* Resources */,
-				D5923BDC9CF4A22C2C4F0D51 /* [CP] Embed Pods Frameworks */,
+				D75405E71E5D37CD16044A25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,7 +269,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1395A1302332308500B2655C /* Build configuration list for PBXNativeTarget "eScoresTests" */;
 			buildPhases = (
-				7EA2F821D607E844093A295C /* [CP] Check Pods Manifest.lock */,
 				1395A1152332308500B2655C /* Sources */,
 				1395A1162332308500B2655C /* Frameworks */,
 				1395A1172332308500B2655C /* Resources */,
@@ -211,7 +287,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1395A1332332308500B2655C /* Build configuration list for PBXNativeTarget "eScoresUITests" */;
 			buildPhases = (
-				067190EA63E4D26E02E72FE4 /* [CP] Check Pods Manifest.lock */,
 				1395A1202332308500B2655C /* Sources */,
 				1395A1212332308500B2655C /* Frameworks */,
 				1395A1222332308500B2655C /* Resources */,
@@ -277,6 +352,7 @@
 				1395A1372332314800B2655C /* Main.storyboard in Resources */,
 				1395A1132332308500B2655C /* LaunchScreen.storyboard in Resources */,
 				1395A1102332308500B2655C /* Assets.xcassets in Resources */,
+				136141AE2337AEC200F284DC /* MatchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,29 +373,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		067190EA63E4D26E02E72FE4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-eScoresUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		335BA1287C3A223B1E149A9C /* [CP] Check Pods Manifest.lock */ = {
+		558D10069154D945449C97D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,29 +395,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7EA2F821D607E844093A295C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-eScoresTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D5923BDC9CF4A22C2C4F0D51 /* [CP] Embed Pods Frameworks */ = {
+		D75405E71E5D37CD16044A25 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,8 +419,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1395A13B2332369D00B2655C /* NetworkManager.swift in Sources */,
 				1395A1392332317300B2655C /* MatchOverViewController.swift in Sources */,
+				1361419E233661BC00F284DC /* League.swift in Sources */,
+				1361419D233661BC00F284DC /* Live.swift in Sources */,
+				13FFEB0F23342888005BB75F /* MatchOverVIewPresenter.swift in Sources */,
+				136141AD2337AEC200F284DC /* MatchTableViewCell.swift in Sources */,
+				1361419F233661BC00F284DC /* Serie.swift in Sources */,
+				136141A1233661BC00F284DC /* Opponent.swift in Sources */,
 				1395A1092332308300B2655C /* AppDelegate.swift in Sources */,
+				136141A6233661BC00F284DC /* Videogame_version.swift in Sources */,
+				136141A7233661BC00F284DC /* Games.swift in Sources */,
+				1395A13D233236D000B2655C /* URL.swift in Sources */,
+				136141A5233661BC00F284DC /* Tournament.swift in Sources */,
+				1361419C233661BC00F284DC /* Match.swift in Sources */,
+				136141AA2337A54100F284DC /* DateUtils.swift in Sources */,
+				136141A4233661BC00F284DC /* Results.swift in Sources */,
+				136141A3233661BC00F284DC /* Opponents.swift in Sources */,
+				136141A2233661BC00F284DC /* Winner.swift in Sources */,
+				136141A0233661BC00F284DC /* Videogame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +602,7 @@
 		};
 		1395A12E2332308500B2655C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3C81F098A0E1BD5B75C7F80 /* Pods-eScores.debug.xcconfig */;
+			baseConfigurationReference = 4BE74DFC4A83843EF39366D2 /* Pods-eScores.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -573,7 +622,7 @@
 		};
 		1395A12F2332308500B2655C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CC95B16CCFA371C7FC2A2A7 /* Pods-eScores.release.xcconfig */;
+			baseConfigurationReference = 26ABDB7E0B95A04A5111687F /* Pods-eScores.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -593,7 +642,6 @@
 		};
 		1395A1312332308500B2655C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73D5C5B93B5C3A6F6B929008 /* Pods-eScoresTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -615,7 +663,6 @@
 		};
 		1395A1322332308500B2655C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06955BC2A417B8BF33091316 /* Pods-eScoresTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -637,7 +684,6 @@
 		};
 		1395A1342332308500B2655C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9D853DDEC6496195DF34451 /* Pods-eScoresUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -658,7 +704,6 @@
 		};
 		1395A1352332308500B2655C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3855E17D826D6E794F61C53A /* Pods-eScoresUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

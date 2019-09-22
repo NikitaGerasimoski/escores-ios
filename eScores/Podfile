@@ -6,15 +6,5 @@ target 'eScores' do
   use_frameworks!
   
   # Pods for eScores
-   pod 'GirdersSwift', '~> 0.4.2'
-  target 'eScoresTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'eScoresUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+   pod 'GirdersSwift'
 end
