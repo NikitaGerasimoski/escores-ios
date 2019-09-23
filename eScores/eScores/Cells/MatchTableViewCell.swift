@@ -40,18 +40,22 @@ class MatchTableViewCell: UITableViewCell {
     func setUpCellForMatch(match: Match) {
         self.startTimeLabel.text = match.begin_at!.formatDateForCell()
         
-        self.leagueInfoLabel.text = match.league!.name! + " " + match.serie!.full_name! + " " + match.tournament!.name!
+        self.leagueInfoLabel.text = match.league!.name! + " " + match.serie!.full_name! + " " + match.name!
         _ = NetworkManager.sharedInstance.getImageForEndpoint(endPoint: (match.league?.image_url!)!).done { (response) in
             self.leagueLogoImage.image = UIImage.init(data: response.body!)
         }
-      
+        if match.opponents!.count == 2 {
+        
         if match.opponents![0].opponent?.id == match.results![0].team_id {
             self.firstTeamScore.text = "\(match.results![0].score!)"
             self.secondTeamScore.text = "\(match.results![1].score!)"
         } else {
             self.firstTeamScore.text = "\(match.results![1].score!)"
             self.secondTeamScore.text = "\(match.results![0].score!)"
-
+        }
+        if match.status == "not_started" {
+            self.firstTeamScore.text = ""
+            self.secondTeamScore.text = ""
         }
         
         self.firstTeamName.text = match.opponents![0].opponent?.name
@@ -62,6 +66,23 @@ class MatchTableViewCell: UITableViewCell {
         self.secondTeamName.text = match.opponents![1].opponent?.name
         _ = NetworkManager.sharedInstance.getImageForEndpoint(endPoint: (match.opponents![1].opponent?.image_url!)!).done { (response) in
             self.secondTeamImage.image = UIImage.init(data: response.body!)
+        }
+        } else if match.opponents!.count == 1 {
+            self.firstTeamScore.text = ""
+            self.secondTeamScore.text = ""
+            self.firstTeamName.text = match.opponents![0].opponent?.name
+            _ = NetworkManager.sharedInstance.getImageForEndpoint(endPoint: (match.opponents![0].opponent?.image_url!)!).done { (response) in
+                self.firstTeamImage.image = UIImage.init(data: response.body!)
+            }
+            self.secondTeamName.text = "TBA"
+            self.secondTeamImage.image = UIImage(named: "TBA")
+        } else {
+            self.firstTeamScore.text = ""
+            self.secondTeamScore.text = ""
+            self.firstTeamName.text = "TBA"
+            self.firstTeamImage.image = UIImage(named: "TBA")
+            self.secondTeamName.text = "TBA"
+            self.secondTeamImage.image = UIImage(named: "TBA")
         }
         
     }

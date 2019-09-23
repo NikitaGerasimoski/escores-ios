@@ -20,12 +20,13 @@ class MatchOverViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = Date().formatDateForTitle()
+        self.navigationItem.title = date.formatDateForTitle()
         self.presenter.viewController = self
         self.tableView.register(UINib(nibName: Cells.matchTableViewCell, bundle: nil), forCellReuseIdentifier: Cells.matchTableViewCell)
         let footerView = UIView()
         self.tableView.tableFooterView = footerView
         self.tableView.tableFooterView?.backgroundColor = UIColor.darkGray
+        tableView.separatorColor = .black
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +42,15 @@ class MatchOverViewController: UIViewController {
     func updateUI() {
         self.matches = presenter.matches
         self.tableView.reloadData()
+        if self.matches.count == 0 {
+            let label = UILabel()
+            label.text = "No matches for the selected date"
+            self.tableView.backgroundView = label
+        } else {
+            let label = UILabel()
+            label.text = ""
+            self.tableView.backgroundView = label
+        }
     }
     
     @IBAction func editTapped(_ sender: Any) {
@@ -49,11 +59,13 @@ class MatchOverViewController: UIViewController {
             self.updateViewConstraints()
             self.datePicker.isHidden = false
             self.editButton.title = "Done"
+            self.tableView.isUserInteractionEnabled = false
         } else {
             self.tableViewTop.constant = 0
             self.updateViewConstraints()
             self.datePicker.isHidden = true
             self.editButton.title = "Edit"
+            self.tableView.isUserInteractionEnabled = true
             self.presenter.provideMatchesForGivenDate(date: date)
         }
     }
@@ -73,6 +85,6 @@ extension MatchOverViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 205
     }
 }
