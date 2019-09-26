@@ -7,15 +7,30 @@
 //
 
 import UIKit
+import PromiseKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var startDate = Date()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        _ = NetworkManager.sharedInstance.getUpcomingMatches() .done { (response) in
+            let jsonDecoder = JSONDecoder()
+            print(response)
+            let matches = try jsonDecoder.decode([Match].self, from: response.body!)
+            self.startDate = matches[0].begin_at!.formatDateForStart()
+            if let vc = self.window?.rootViewController?.children[0] as? MatchOverViewController {
+                vc.date = self.startDate
+                vc.presenter.provideMatchesForGivenDate(date: vc.date)
+            }
+        } .catch({ (error) in
+            print(error)
+        })
+        
         return true
     }
 

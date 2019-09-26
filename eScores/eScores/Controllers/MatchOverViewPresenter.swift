@@ -17,13 +17,14 @@ class MatchOverViewPresenter: NSObject {
             print(response)
             let jsonDecoder = JSONDecoder()
             self.matches = try jsonDecoder.decode([Match].self, from: response.body!)
-            self.viewController.updateUI()
+            if let vc = self.viewController {
+                vc.date = date
+                vc.updateUI()
+            }
             } .catch({ (error) in
                 print(error)
             })
         }
 }
 
-struct Cells {
-    static let matchTableViewCell = "MatchTableViewCell"
-}
+

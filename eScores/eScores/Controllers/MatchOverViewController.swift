@@ -22,28 +22,43 @@ class MatchOverViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = date.formatDateForTitle()
         self.presenter.viewController = self
+        self.setUpTableView()
+    }
+    
+    func setUpTableView() {
         self.tableView.register(UINib(nibName: Cells.matchTableViewCell, bundle: nil), forCellReuseIdentifier: Cells.matchTableViewCell)
         let footerView = UIView()
         self.tableView.tableFooterView = footerView
         self.tableView.tableFooterView?.backgroundColor = UIColor.darkGray
         tableView.separatorColor = .black
-        
+        self.tableView.showsVerticalScrollIndicator = false
+        self.tableView.separatorInset = UIEdgeInsets.zero
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.presenter.viewController = self
         self.presenter.provideMatchesForGivenDate(date: date)
-        
-      
+        }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.presenter.viewController = nil
+        super.viewWillDisappear(animated)
     }
+    
     @IBAction func datePickerValueChanged(_ sender: Any) {
         navigationItem.title = datePicker.date.formatDateForTitle()
         self.date = datePicker.date
     }
+    
     func updateUI() {
         self.matches = presenter.matches
+        self.navigationItem.title = date.formatDateForTitle()
+        self.datePicker.date = date
         self.tableView.reloadData()
         if self.matches.count == 0 {
             let label = UILabel()
+            label.textAlignment = NSTextAlignment.center
             label.text = "No matches for the selected date"
             self.tableView.backgroundView = label
         } else {
@@ -86,5 +101,25 @@ extension MatchOverViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 205
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if matches[indexPath.row].opponents?.count != 2 {
+            let alertController = UIAlertController(title: "No Info Available", message: "We do not have information about this match because one or both of the teams have not been announced.", preferredStyle: .alert)
+            let action1 = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction) in
+                self.dismiss(animated: true, completion: nil)
+            }
+            alertController.addAction(action1)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        let nextVC = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "MatchDetailsViewController") as! MatchDetailsViewController
+        nextVC.seriesType =   "Best of \(matches[indexPath.row].number_of_games ?? 1)"
+        if let cell = tableView.cellForRow(at: indexPath) as? MatchTableViewCell {
+            nextVC.headerModel = cell.headerModel
+            nextVC.navigationItem.title = matches[indexPath.row].name!
+        
+       }
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

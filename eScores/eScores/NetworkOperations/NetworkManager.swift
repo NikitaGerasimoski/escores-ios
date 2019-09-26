@@ -21,11 +21,24 @@ class NetworkManager {
         let request = Request(URL: url!, method: .GET, parameters: [:])
         return http.executeRequestAsync(request: request)
     }
+    func getUpcomingMatches() -> Promise<Response<Data>> {
+        let url = URL(string: RestEndpoint.baseUrl + RestEndpoint.matchesUrl + RestEndpoint.upcomingUrl + RestEndpoint.upSort +  RestEndpoint.mandatoryToken)
+           let request = Request(URL: url!, method: .GET, parameters: [:])
+           return http.executeRequestAsync(request: request)
+       }
+    
     func getImageForEndpoint(endPoint: String) -> Promise<Response<Data>> {
         let url = URL(string: endPoint)
         let request = Request(URL: url!,method: .GET)
         return http.executeRequestAsync(request: request)
     }
+    
+    func getTeamForID(id: Int) -> Promise<Response<Data>> {
+        let url = URL(string: RestEndpoint.baseUrl + RestEndpoint.teamsUrl + RestEndpoint.teamIdFilter + "\(id)" + RestEndpoint.mandatoryToken)
+        let request = Request(URL: url!,method: .GET)
+        return http.executeRequestAsync(request: request)
+    }
+    
     
 }
 
