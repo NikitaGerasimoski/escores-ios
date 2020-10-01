@@ -20,6 +20,9 @@ class MatchOverViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let vc = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController() as! OnBoardingViewController
+        vc.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width*0.8, height: self.view.frame.size.height*0.8)
+        self.present(vc, animated: true, completion: nil)
         self.navigationItem.title = date.formatDateForTitle()
         self.presenter.viewController = self
         self.setUpTableView()
@@ -70,12 +73,18 @@ class MatchOverViewController: UIViewController {
     
     @IBAction func editTapped(_ sender: Any) {
         if self.editButton.title == "Edit" {
+            if #available(iOS 13.0, *) {
+                self.editButton.image = UIImage.init(systemName: "checkmark")
+            }
             self.tableViewTop.constant = 150
             self.updateViewConstraints()
             self.datePicker.isHidden = false
             self.editButton.title = "Done"
             self.tableView.isUserInteractionEnabled = false
         } else {
+            if #available(iOS 13.0, *) {
+                self.editButton.image = UIImage.init(systemName: "calendar")
+            }
             self.tableViewTop.constant = 0
             self.updateViewConstraints()
             self.datePicker.isHidden = true

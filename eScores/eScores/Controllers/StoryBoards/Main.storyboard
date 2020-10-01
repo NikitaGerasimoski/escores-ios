@@ -11,7 +11,7 @@
         <!--Match Over View Controller-->
         <scene sceneID="rbG-RD-44u">
             <objects>
-                <viewController id="DKp-hf-EYb" customClass="MatchOverViewController" customModule="eScores" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DKp-hf-EYb" customClass="MatchOverViewController" customModule="eScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="22O-rW-AEl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
                         <viewLayoutGuide key="safeArea" id="iie-iQ-cSr"/>
                     </view>
                     <navigationItem key="navigationItem" id="n5F-ko-RHl">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="U0r-NJ-7qy">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" image="calendar" catalog="system" id="U0r-NJ-7qy">
                             <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="editTapped:" destination="DKp-hf-EYb" id="VZL-gF-LX7"/>
@@ -68,7 +68,7 @@
         <!--Match Details View Controller-->
         <scene sceneID="fb7-du-b2q">
             <objects>
-                <viewController storyboardIdentifier="MatchDetailsViewController" id="WZK-VH-RCH" customClass="MatchDetailsViewController" customModule="eScores" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MatchDetailsViewController" id="WZK-VH-RCH" customClass="MatchDetailsViewController" customModule="eScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Om-al-EbX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,4 +120,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="663.61607142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="64" height="54"/>
+    </resources>
 </document>

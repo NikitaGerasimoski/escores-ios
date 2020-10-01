@@ -119,7 +119,10 @@ extension MatchDetailsViewController: UITableViewDataSource,UITableViewDelegate 
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let numberOfPlayers = firstTeamPlayers.count < secondTeamPlayer.count ? secondTeamPlayer.count : firstTeamPlayers.count
+        var numberOfPlayers = firstTeamPlayers.count < secondTeamPlayer.count ? secondTeamPlayer.count : firstTeamPlayers.count
+        if numberOfPlayers > 7 {
+            numberOfPlayers = 7
+        }
         switch indexPath.row {
         case 0:
             return 200
